@@ -60,7 +60,7 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
 
             //posologia 2
             Posologia posologia2 = new Posologia();
-            posologia2.setNome("Expectorante");
+            posologia2.setNome("Estimulo de Bronquio Dilatação");
             tratamento.setPosologias(Collections.singleton(posologia2));
 
             Medicamento medicamento2 = new Medicamento();
