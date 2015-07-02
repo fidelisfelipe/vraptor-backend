@@ -10,11 +10,11 @@
   <!-- End Page Loading -->
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
   <!-- START TOP -->
-  <div id="top" class="clearfix">
+  <div id="top" class="clearfix" ng-controller="top-ctrl">
 
   	<!-- Start App Logo -->
   	<div class="applogo">
-  		<a href="index.html" class="logo">kode</a>
+  		<a href="index.html" class="logo" ng-bind="title"></a>
   	</div>
   	<!-- End App Logo -->
 
@@ -67,7 +67,7 @@
     </li>
 
     <li class="dropdown link">
-      <a href="#" data-toggle="dropdown" class="dropdown-toggle profilebox"><img src="img/profileimg.png" alt="img"><b>Jonathan Doe</b><span class="caret"></span></a>
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle profilebox"><img src="html/img/profileimg.png" alt="img"><b ng-bind="username"></b><span class="caret"></span></a>
         <ul class="dropdown-menu dropdown-menu-list dropdown-menu-right">
           <li role="presentation" class="dropdown-header">Profile</li>
           <li><a href="#"><i class="fa falist fa-inbox"></i>Inbox<span class="badge label-danger">4</span></a></li>

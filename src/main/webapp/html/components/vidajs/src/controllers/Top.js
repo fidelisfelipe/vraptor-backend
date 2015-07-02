@@ -12,6 +12,7 @@
 	function setAccountCtrl(scope){
 		console.log("top-ctrl");
 		scope.title = "Vida";
+		scope.username = "Fidelis Guimarães";
 		scope.href = "#";
 	}
 	
