@@ -29,12 +29,5 @@ public class IndexController {
 	public void indexAngular() {
 		result.include("variable", "VRaptor!");
 	}
-	@Path("/flyListSearchResult")
-	public void flyListSearchResult() {
-		
-	}
-	@Path("/flyGridSearchResult")
-	public void flyGridSearchResult() {
-		
-	}
+	
 }

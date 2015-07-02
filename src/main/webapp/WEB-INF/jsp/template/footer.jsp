@@ -6,21 +6,5 @@
 
 <!-- Footer init-->
 
-	<footer id="footer">
-		<div ng-controller="logo-footer-ctrl" class="bottom">
-			<div class="container">
-				<div class="logo pull-left">
-					<a href="{{href}}" title="{{name}}"> <img src="{{path}}" alt="<fmt:message key="title"/>" />
-					</a>
-				</div>
-				<div class="pull-right">
-					<a id="back-to-top" href="#" class="animated" data-animation-type="bounce"><i class="soap-icon-longarrow-up circle"></i></a>
-				</div>
-				<div class="copyright pull-right">
-					<p>&copy; {{year}} {{name}}</p>
-				</div>
-			</div>
-		</div>
-	</footer>
 
 <!-- Footer end-->
