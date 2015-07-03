@@ -25,21 +25,18 @@
 
     <!-- Start Searchbox -->
     <form class="searchform">
-      <input type="text" class="searchbox" id="searchbox" placeholder="Search">
+      <input type="text" class="searchbox" id="searchbox" ng-placeholder='search'>
       <span class="searchbutton"><i class="fa fa-search"></i></span>
     </form>
     <!-- End Searchbox -->
 
     <!-- Start Top Menu -->
-    <ul class="topmenu">
-      <li><a href="#">Files</a></li>
-      <li><a href="#">Authors</a></li>
-      <li class="dropdown">
-        <a href="#" data-toggle="dropdown" class="dropdown-toggle">My Files <span class="caret"></span></a>
+    <ul class="topmenu" >
+      <li ng-repeat="menu in menuSimpleList" ><a href="{{menu.href}}" ng-bind="menu.name"></a></li>
+      <li class="dropdown" ng-repeat="menu in menuDropDownList">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle">{{menu.name}}<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Videos</a></li>
-          <li><a href="#">Pictures</a></li>
-          <li><a href="#">Blog Posts</a></li>
+          <li ng-repeat="item in menu.itens"><a href="{{item.href}}" ng-bind="item.name"></a></li>
         </ul>
       </li>
     </ul>

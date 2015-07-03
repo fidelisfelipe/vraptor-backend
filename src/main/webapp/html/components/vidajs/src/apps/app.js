@@ -6,6 +6,14 @@
 		['controllers-ctrl']);	
 
 	var nameVarInject = '$scope';
+	
+	/**
+	 * Controllers
+	 * */
+	
+	var controllers = angular.module('controllers-ctrl',[]);
+	
+	
 
 /** rotas
 sampleApp.config(['$routeProvider',

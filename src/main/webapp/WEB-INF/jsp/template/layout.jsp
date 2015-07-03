@@ -6,13 +6,13 @@
 <!DOCTYPE html>
 <!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
 <!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
-<!--[if gt IE 9]><!-->  <html> <!--<![endif]-->
-<head>
+<!--[if gt IE 9]><!-->  <html ng-app="vida"> <!--<![endif]-->
+<head ng-controller="header-ctrl">
   
 <tiles:insertAttribute name="header" />
   
 </head>
-<body ng-app="vida" class="ng-cloak">
+<body class="ng-cloak">
 	<tiles:insertAttribute name="body" />
 </body>   
 </html>

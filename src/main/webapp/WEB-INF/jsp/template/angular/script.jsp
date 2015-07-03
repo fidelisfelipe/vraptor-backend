@@ -17,10 +17,10 @@ Plugin.js - Some Specific JS codes for Plugin Settings
 ================================================ -->
 	<script type="text/javascript" src="html/js/plugins.js"></script>
     
-    <!-- angular -->
-	<script type="text/javascript" src="html/components/angular/angular.js"></script>
 	<!-- app -->
 	<script type="text/javascript" src="html/components/vidajs/src/apps/app.js"></script>
+	<!-- header -->
+	<script type="text/javascript" src="html/components/vidajs/src/controllers/Header.js"></script>
 	<!-- top -->
 	<script type="text/javascript" src="html/components/vidajs/src/controllers/Top.js"></script>
 

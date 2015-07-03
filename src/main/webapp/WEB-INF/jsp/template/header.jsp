@@ -4,6 +4,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!-- Page Title -->
 
-<title>{{title}}</title>
+<title ng-bind="title"></title>
 <tiles:insertAttribute name="metatag" />
+	<!-- angular -->
+	<script type="text/javascript" src="html/components/angular/angular.js"></script>
 <tiles:insertAttribute name="style" />  
