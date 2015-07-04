@@ -32,6 +32,24 @@
 			       {name:"Comentários", href:"#"}
 			      ]
 		}];
+		scope.menuDropDownCreateList = [{name:"Criar Novo", href:"#" ,
+			itens:[
+			       {name:"Produto ou Item", href:"#", classIco:"fa-paper-plane-o"},
+			       {name:"Blog ou Post", href:"#", classIco:"fa-font"},
+			       {name:"Imagem", href:"#", classIco:"fa-file-image-o"},
+			       {name:"Vídeo", href:"#", classIco:"fa-file-video-o"}
+			      ]
+		}];
+		scope.msgCount = 5;
+		scope.menuDropDownPerfilList = [{name:"Perfil", href:"#" ,
+			itens:[
+			       {name:"Mensagens", href:"#", classIco:"fa-inbox", count:"5"},
+			       {name:"Arquivos", href:"#", classIco:"fa-file-o"},
+			       {name:"Configurações", href:"#", classIco:"fa-wrench"},
+			       {name:"Bloquear", href:"#", classIco:"fa-lock"},
+			       {name:"Sair", href:"#", classIco:"fa-power-off"}
+			      ]
+		}];
 		
 	}
 	
