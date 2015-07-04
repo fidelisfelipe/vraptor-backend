@@ -6,7 +6,6 @@
 <!-- Body init -->
 
 <div id="page-wrapper">
-		<tiles:insertAttribute name="menu" />
 		<tiles:insertAttribute name="orientationTop" />
 		<tiles:insertAttribute name="innerMiddle" />
         <tiles:insertAttribute name="footer" />

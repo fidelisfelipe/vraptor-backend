@@ -53,3 +53,14 @@
 		
 	}
 	
+	
+	/**
+	 * Ctrl Right
+	 **/
+
+	controllers.controller('top-right-ctrl', [nameVarInject, setTopRightCtrl]);
+	function setTopRightCtrl(scope){
+		console.log("top-right-ctrl");
+		scope.abaList = [{name:"Hoje", href:"#today", control:"today", active: true}];
+	}
+	
