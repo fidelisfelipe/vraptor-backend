@@ -55,12 +55,36 @@
 	
 	
 	/**
-	 * Ctrl Right
+	 * Ctrl Top Right
 	 **/
 
-	controllers.controller('top-right-ctrl', [nameVarInject, setTopRightCtrl]);
-	function setTopRightCtrl(scope){
-		console.log("top-right-ctrl");
+	controllers.controller('top-right-abas-ctrl', [nameVarInject, setTopRightAbasCtrl]);
+	function setTopRightAbasCtrl(scope){
+		console.log("top-right-abas-ctrl");
 		scope.abaList = [{name:"Hoje", href:"#today", control:"today", active: true}];
+	}
+	/**
+	 * Ctrl Top Right - aba left
+	 **/
+	
+	controllers.controller('top-right-aba-left-ctrl', [nameVarInject, setTopRightCtrl]);
+	function setTopRightCtrl(scope){
+		console.log("top-right-aba-left-ctrl");
+		scope.name = "Hoje";
+		scope.href = "#";
+		scope.control = "today";
+		scope.active = true;
+		scope.newTitle = "Novo";
+		scope.newActive = true;
+		scope.postList = [{
+			name: "Inicio do Desenvolvimento",
+			desc:"Iniciamos o desenvolvimento do Prototipo nesta semana. Hoje é sábado e muita coisa evoluíu", 
+			classType:"sucess", //types: danger, success, info, warning
+			nameType:"Ordem", 
+			control:"today", 
+			active: true, 
+			dateExt: "04 de Julho"
+		}];
+		
 	}
 	

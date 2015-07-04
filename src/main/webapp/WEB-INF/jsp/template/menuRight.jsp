@@ -6,10 +6,10 @@
 
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
 <!-- START SIDEPANEL -->
-<div role="tabpanel" class="sidepanel" ng-controller="top-right-ctrl">
+<div role="tabpanel" class="sidepanel" >
 
   <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
+  <ul class="nav nav-tabs" role="tablist" ng-controller="top-right-abas-ctrl">
     <li ng-repeat="aba in abaList" role="presentation" ng:class="{true:'active'}[aba.active]"><a href="{{aba.href}}" aria-controls="today" role="tab" data-toggle="tab" ng-bind="aba.name"></a></li>
     <li role="presentation"><a href="#tasks" aria-controls="tasks" role="tab" data-toggle="tab">TASKS</a></li>
     <li role="presentation"><a href="#chat" aria-controls="chat" role="tab" data-toggle="tab">CHAT</a></li>
@@ -19,47 +19,22 @@
   <div class="tab-content">
 
     <!-- Start Today -->
-    <div role="tabpanel" class="tab-pane active" id="today">
+    <div ng-controller="top-right-aba-left-ctrl" role="tabpanel" class="tab-pane" ng:class="{true:'active'}[active]" id="{{control}}">
 
       <div class="sidepanel-m-title">
-        Today
-        <span class="left-icon"><a href="#"><i class="fa fa-refresh"></i></a></span>
-        <span class="right-icon"><a href="#"><i class="fa fa-file-o"></i></a></span>
+        {{name}}
+        <span class="left-icon"><a href="{{href}}"><i class="fa fa-refresh"></i></a></span>
       </div>
 
-      <div class="gn-title">NEW</div>
+      <div class="gn-title" ng:class="{false:'hide'}[newActive]" ng-bind="newTitle"></div>
 
       <ul class="list-w-title">
-        <li>
+        <li ng-repeat="post in postList">
           <a href="#">
-            <span class="label label-danger">ORDER</span>
-            <span class="date">9 hours ago</span>
-            <h4>New Jacket 2.0</h4>
-            Etiam auctor porta augue sit amet facilisis. Sed libero nisi, scelerisque.
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="label label-success">COMMENT</span>
-            <span class="date">14 hours ago</span>
-            <h4>Bill Jackson</h4>
-            Etiam auctor porta augue sit amet facilisis. Sed libero nisi, scelerisque.
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="label label-info">MEETING</span>
-            <span class="date">at 2:30 PM</span>
-            <h4>Developer Team</h4>
-            Etiam auctor porta augue sit amet facilisis. Sed libero nisi, scelerisque.
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="label label-warning">EVENT</span>
-            <span class="date">3 days left</span>
-            <h4>Birthday Party</h4>
-            Etiam auctor porta augue sit amet facilisis. Sed libero nisi, scelerisque.
+            <span class="label label-{{post.classType}}" ng-bind="post.nameType"></span>
+            <span class="date" ng-bind="post.dateExt"></span>
+            <h4 ng-bind="post.name"></h4>
+            {{post.desc}}
           </a>
         </li>
       </ul>
