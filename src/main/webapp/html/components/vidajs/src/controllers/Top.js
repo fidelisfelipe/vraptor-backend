@@ -61,14 +61,18 @@
 	controllers.controller('top-right-abas-ctrl', [nameVarInject, setTopRightAbasCtrl]);
 	function setTopRightAbasCtrl(scope){
 		console.log("top-right-abas-ctrl");
-		scope.abaList = [{name:"Hoje", href:"#today", control:"today", active: true}];
+		scope.abaList = [
+		                 {name:"Hoje", href:"#today", control:"today", active: true},
+		                 {name:"Tarefas", href:"#tasks", control:"tasks"},
+		                 {name:"Chat", href:"#chat", control:"chat"}
+		                 ];
 	}
 	/**
 	 * Ctrl Top Right - aba left
 	 **/
 	
-	controllers.controller('top-right-aba-left-ctrl', [nameVarInject, setTopRightCtrl]);
-	function setTopRightCtrl(scope){
+	controllers.controller('top-right-aba-left-ctrl', [nameVarInject, setTopRightAbaLeftCtrl]);
+	function setTopRightAbaLeftCtrl(scope){
 		console.log("top-right-aba-left-ctrl");
 		scope.name = "Hoje";
 		scope.href = "#";
@@ -84,6 +88,40 @@
 			control:"today", 
 			active: true, 
 			dateExt: "04 de Julho"
+		}];
+		
+	}
+	/**
+	 * Ctrl Top Right - aba middle
+	 **/
+	
+	controllers.controller('top-right-aba-middle-ctrl', [nameVarInject, setTopRightAbaMiddleCtrl]);
+	function setTopRightAbaMiddleCtrl(scope){
+		console.log("top-right-aba-middle-ctrl");
+		scope.name = "Tarefas";
+		scope.href = "#";
+		scope.control = "tasks";
+		scope.active = false;
+		scope.today = "Hoje";
+		scope.tasksTodayList = [{
+			id: 1,
+			label: "Agendar Exame",
+			time: "10:00",
+			type: "success"//types: primary, danger, success, info, warning
+		}];
+		scope.tomorrow = "Amanhã",
+		scope.tasksTomorrowList = [{
+			id: 2,
+			label: "Confirmar Agendamento de Exame",
+			time: "09:00",
+			type: "info"//types: primary, danger, success, info, warning
+		}];
+		scope.chat = "Chat",
+		scope.tasksTomorrowList = [{
+			id: 2,
+			label: "Confirmar Agendamento de Exame",
+			time: "09:00",
+			type: "info"//types: primary, danger, success, info, warning
 		}];
 		
 	}
