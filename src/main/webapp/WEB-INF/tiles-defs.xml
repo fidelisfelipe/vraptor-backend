@@ -15,6 +15,8 @@
 	<definition name="angular.layout.body" template="/WEB-INF/jsp/template/angular/body.jsp">
 		<put-attribute name="menuTop" value="/WEB-INF/jsp/template/menuTop.jsp"></put-attribute>
 		<put-attribute name="menuRight" value="/WEB-INF/jsp/template/menuRight.jsp"></put-attribute>
+		<put-attribute name="menuLeft" value="/WEB-INF/jsp/template/bodyInner.jsp"></put-attribute>
+		<put-attribute name="bodyInner" value="/WEB-INF/jsp/template/menuLeft.jsp"></put-attribute>
 		<put-attribute name="orientationTop" value="" cascade="true"></put-attribute>
 		<put-attribute name="innerMiddle" value="test.layout.body.innerMiddle" cascade="true"></put-attribute>
 		<put-attribute name="footer" value="test.layout.footer" ></put-attribute>

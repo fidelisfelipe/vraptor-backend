@@ -11,8 +11,6 @@
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist" ng-controller="top-right-abas-ctrl">
     <li ng-repeat="aba in abaList" role="presentation" ng:class="{true:'active'}[aba.active]"><a href="{{aba.href}}" aria-controls="today" role="tab" data-toggle="tab" ng-bind="aba.name"></a></li>
-    <li role="presentation"><a href="#tasks" aria-controls="tasks" role="tab" data-toggle="tab">TASKS</a></li>
-    <li role="presentation"><a href="#chat" aria-controls="chat" role="tab" data-toggle="tab">CHAT</a></li>
   </ul>
 
   <!-- Tab panes -->
@@ -43,81 +41,50 @@
     <!-- End Today -->
 
     <!-- Start Tasks -->
-    <div role="tabpanel" class="tab-pane" id="tasks">
+    <div ng-controller="top-right-aba-middle-ctrl" role="tabpanel" class="tab-pane" id="{{control}}" ng:class="{true:'active'}[active]" >
 
       <div class="sidepanel-m-title">
-        To-do List
-        <span class="left-icon"><a href="#"><i class="fa fa-pencil"></i></a></span>
-        <span class="right-icon"><a href="#"><i class="fa fa-trash"></i></a></span>
+        {{name}}
+        <span class="left-icon"><a href="{{href}}"><i class="fa fa-refresh"></i></a></span>
       </div>
 
-      <div class="gn-title">TODAY</div>
+      <div class="gn-title" ng-bind="today"></div>
 
       <ul class="todo-list">
-        <li class="checkbox checkbox-primary">
-          <input id="checkboxside1" type="checkbox"><label for="checkboxside1">Add new products</label>
-        </li>
-        
-        <li class="checkbox checkbox-primary">
-          <input id="checkboxside2" type="checkbox"><label for="checkboxside2"><b>May 12, 6:30 pm</b> Meeting with Team</label>
-        </li>
-        
-        <li class="checkbox checkbox-warning">
-          <input id="checkboxside3" type="checkbox"><label for="checkboxside3">Design Facebook page</label>
-        </li>
-        
-        <li class="checkbox checkbox-info">
-          <input id="checkboxside4" type="checkbox"><label for="checkboxside4">Send Invoice to customers</label>
-        </li>
-        
-        <li class="checkbox checkbox-danger">
-          <input id="checkboxside5" type="checkbox"><label for="checkboxside5">Meeting with developer team</label>
+        <li ng-repeat="task in tasksTodayList" class="checkbox checkbox-primary">
+          <input id="checkboxside{{task.id}}" type="checkbox"><label for="checkboxside{{task.id}}" ng-bind="task.label"><b ng-bind="task.time"></b></label>
         </li>
       </ul>
 
-      <div class="gn-title">TOMORROW</div>
+      <div class="gn-title" ng-bind="tomorrow"></div>
       <ul class="todo-list">
-        <li class="checkbox checkbox-warning">
-          <input id="checkboxside6" type="checkbox"><label for="checkboxside6">Redesign our company blog</label>
+        <li ng-repeat="task in tasksTomorrowList" class="checkbox checkbox-warning">
+          <input id="checkboxside{{task.id}}" type="checkbox"><label for="checkboxside{{task.id}}" ng-bind="task.label"><b ng-bind="task.time"></b></label>
         </li>
-        
-        <li class="checkbox checkbox-success">
-          <input id="checkboxside7" type="checkbox"><label for="checkboxside7">Finish client work</label>
-        </li>
-        
-        <li class="checkbox checkbox-info">
-          <input id="checkboxside8" type="checkbox"><label for="checkboxside8">Call Johnny from Developer Team</label>
-        </li>
-
       </ul>
     </div>    
     <!-- End Tasks -->
 
     <!-- Start Chat -->
-    <div role="tabpanel" class="tab-pane" id="chat">
+    <div ng-controller="top-right-aba-right-ctrl" role="tabpanel" class="tab-pane" id="{{control}}">
 
       <div class="sidepanel-m-title">
-        Friend List
-        <span class="left-icon"><a href="#"><i class="fa fa-pencil"></i></a></span>
-        <span class="right-icon"><a href="#"><i class="fa fa-trash"></i></a></span>
+        {{name}}
+        <span class="left-icon"><a href="href"><i class="fa fa-refresh"></i></a></span>
       </div>
 
-      <div class="gn-title">ONLINE MEMBERS (3)</div>
+      <div class="gn-title">{{titleOnline}} ({{qtdOnline}})</div>
       <ul class="group">
-        <li class="member"><a href="#"><img src="img/profileimg.png" alt="img"><b>Allice Mingham</b>Los Angeles</a><span class="status online"></span></li>
-        <li class="member"><a href="#"><img src="img/profileimg2.png" alt="img"><b>James Throwing</b>Las Vegas</a><span class="status busy"></span></li>
-        <li class="member"><a href="#"><img src="img/profileimg3.png" alt="img"><b>Fred Stonefield</b>New York</a><span class="status away"></span></li>
-        <li class="member"><a href="#"><img src="img/profileimg4.png" alt="img"><b>Chris M. Johnson</b>California</a><span class="status online"></span></li>
+        <li ng-repeat="member in memberOnlineList" class="member"><a href="member.href"><img ng-src="{{member.photo}}" alt="member.name"><b ng-bind="member.name"></b>{{member.city}}</a><span class="status {{member.status}}"></span></li>
       </ul>
 
-      <div class="gn-title">OFFLINE MEMBERS (8)</div>
+      <div class="gn-title">{{titleOffline}} ({{qtdOffline}})</div>
      <ul class="group">
-        <li class="member"><a href="#"><img src="img/profileimg5.png" alt="img"><b>Allice Mingham</b>Los Angeles</a><span class="status offline"></span></li>
-        <li class="member"><a href="#"><img src="img/profileimg6.png" alt="img"><b>James Throwing</b>Las Vegas</a><span class="status offline"></span></li>
+      	<li ng-repeat="member in memberOfflineList" class="member"><a href="member.href"><img ng-src="{{member.photo}}" alt="member.name"><b ng-bind="member.name"></b>{{member.city}}</a><span class="status {{member.status}}"></span></li>
       </ul>
 
       <form class="search">
-        <input type="text" class="form-control" placeholder="Search a Friend...">
+        <input type="text" class="form-control" placeholder="{{titleSearch}}">
       </form>
     </div>
     <!-- End Chat -->

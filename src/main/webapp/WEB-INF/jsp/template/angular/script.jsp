@@ -23,5 +23,7 @@ Plugin.js - Some Specific JS codes for Plugin Settings
 	<script type="text/javascript" src="html/components/vidajs/src/controllers/Header.js"></script>
 	<!-- top -->
 	<script type="text/javascript" src="html/components/vidajs/src/controllers/Top.js"></script>
+	<!-- body inner -->
+	<script type="text/javascript" src="html/components/vidajs/src/controllers/BodyInner.js"></script>
 
 <!--End Javascript -->

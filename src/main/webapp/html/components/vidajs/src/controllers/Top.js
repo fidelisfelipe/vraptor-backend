@@ -55,20 +55,24 @@
 	
 	
 	/**
-	 * Ctrl Top Right
+	 * Ctrl Top Right Abas
 	 **/
 
 	controllers.controller('top-right-abas-ctrl', [nameVarInject, setTopRightAbasCtrl]);
 	function setTopRightAbasCtrl(scope){
 		console.log("top-right-abas-ctrl");
-		scope.abaList = [{name:"Hoje", href:"#today", control:"today", active: true}];
+		scope.abaList = [
+		                 {name:"Hoje", href:"#today", control:"today", active: true},
+		                 {name:"Tarefas", href:"#tasks", control:"tasks"},
+		                 {name:"Chat", href:"#chat", control:"chat"}
+		                 ];
 	}
 	/**
 	 * Ctrl Top Right - aba left
 	 **/
 	
-	controllers.controller('top-right-aba-left-ctrl', [nameVarInject, setTopRightCtrl]);
-	function setTopRightCtrl(scope){
+	controllers.controller('top-right-aba-left-ctrl', [nameVarInject, setTopRightAbaLeftCtrl]);
+	function setTopRightAbaLeftCtrl(scope){
 		console.log("top-right-aba-left-ctrl");
 		scope.name = "Hoje";
 		scope.href = "#";
@@ -87,4 +91,120 @@
 		}];
 		
 	}
+	/**
+	 * Ctrl Top Right - aba middle
+	 **/
 	
+	controllers.controller('top-right-aba-middle-ctrl', [nameVarInject, setTopRightAbaMiddleCtrl]);
+	function setTopRightAbaMiddleCtrl(scope){
+		console.log("top-right-aba-middle-ctrl");
+		scope.name = "Tarefas";
+		scope.href = "#";
+		scope.control = "tasks";
+		scope.active = false;
+		scope.today = "Hoje";
+		scope.tasksTodayList = [{
+			id: 1,
+			label: "Agendar Exame",
+			time: "10:00",
+			type: "success"//types: primary, danger, success, info, warning
+		}];
+		scope.tomorrow = "Amanhã",
+		scope.tasksTomorrowList = [{
+			id: 2,
+			label: "Confirmar Agendamento de Exame",
+			time: "09:00",
+			type: "info"//types: primary, danger, success, info, warning
+		}];
+		scope.chat = "Chat",
+		scope.tasksTomorrowList = [{
+			id: 2,
+			label: "Confirmar Agendamento de Exame",
+			time: "09:00",
+			type: "info"//types: primary, danger, success, info, warning
+		}];
+		
+	}
+	/**
+	 * Ctrl Top Right - aba right
+	 **/
+	
+	controllers.controller('top-right-aba-right-ctrl', [nameVarInject, setTopRightAbaRightCtrl]);
+	function setTopRightAbaRightCtrl(scope){
+		console.log("top-right-aba-right-ctrl");
+		scope.name = "Chat";
+		scope.titleOnline = "Pessoas Online",
+		scope.qtdOnline = 3
+		scope.href = "#";
+		scope.control = "chat";
+		scope.name = "Chat";
+		scope.titleOffline = "Pessoas Offline",
+		scope.qtdOffline = 3,
+		scope.tasksTodayList = [{
+			id: 1,
+			label: "Agendar Exame",
+			time: "10:00",
+			type: "success"//types: primary, danger, success, info, warning
+		}];	
+		scope.memberOnlineList = [{
+			href: "#",
+			name: "Fidelis Guimarães",
+			city: "Brasilia - DF",
+			status: "online", //online, busy, away, 
+			photo: "html/img/profileimg.png",
+			time: "09:00",
+			type: "info"//types: primary, danger, success, info, warning
+		}];
+		scope.memberOfflineList = [{
+			href: "#",
+			name: "Jone",
+			city: "Brasilia - DF",
+			status: "offline", //online, busy, away, 
+			photo: "html/img/profileimg5.png",
+			time: "09:00",
+			type: "info"//types: primary, danger, success, info, warning
+		}];
+		scope.tasksTomorrowList = [{
+			id: 2,
+			label: "Confirmar Agendamento de Exame",
+			time: "09:00",
+			type: "info"//types: primary, danger, success, info, warning
+		}];
+		titleSearch = "Buscar Contatos"
+		
+	}
+	/**
+	 * Ctrl Top Left - Menu
+	 **/
+	
+	controllers.controller('top-left-ctrl', [nameVarInject, setTopLeftCtrl]);
+	function setTopLeftCtrl(scope){
+		console.log("top-left-ctrl");
+		scope.name = "Principal",
+		scope.menuList = [{
+			total: 1,
+			label: "Painel de Controles",
+			href:"html/index.html",
+			type: "home"//types: home, chart, 
+		},
+		{
+			total: 2,
+			label: "Gráficos",
+			href:"html/charts.html",
+			type: "bar-chart"
+		}];
+		scope.menuSubList = [{
+			total: 1,
+			label: "Elementos",
+			href:"#",
+			type: "home",//types: home, chart, 
+  			itens:[
+  			       {label:"Icones", href:"html/icons.html"},
+  			       {label:"Icones Novos", href:"html/icons.html"}
+  			      ]//<span class="label label-danger">NEW</span>"
+	    }];
+		scope.labelInit= "Inicio Des",
+		scope.labelEnd= "Fim Des",
+		scope.porcent= "10",
+		scope.titlePorcent = "% concluído"
+	}

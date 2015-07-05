@@ -11,6 +11,8 @@
 
 		<tiles:insertAttribute name="menuTop"/>
 		<tiles:insertAttribute name="menuRight"/>
+		<tiles:insertAttribute name="menuLeft"/>
+		<tiles:insertAttribute name="bodyInner"/>
 
 <!-- Body end -->
 
