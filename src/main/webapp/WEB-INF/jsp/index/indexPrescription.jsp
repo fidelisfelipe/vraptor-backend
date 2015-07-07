@@ -5,4 +5,4 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 
-<tiles:insertDefinition name="test.layout.angular" />
+<tiles:insertDefinition name="life.layout.prescriptions" />

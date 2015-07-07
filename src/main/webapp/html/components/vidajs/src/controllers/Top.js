@@ -24,7 +24,7 @@
 		scope.search = "Pesquisar";
 		scope.username = "Fidelis Guimarães";
 		scope.href = "#";
-		scope.menuSimpleList = [{name:"Arquivo", href:"#"}];
+		scope.menuSimpleList = [{name:"Mensagens", href:"posts"},{name:"Prescrições", href:"prescriptions"}];
 		scope.menuDropDownList = [{name:"Arquivos", href:"#" ,
 			itens:[
 			       {name:"Videos", href:"#"},
@@ -181,11 +181,15 @@
 	function setTopLeftCtrl(scope){
 		console.log("top-left-ctrl");
 		scope.name = "Principal",
+		scope.labelInit = "Inicio Des";
+		scope.labelEnd = "Fim Des";
+		scope.porcent = "10";
+		scope.titlePorcent = "% concluído";
 		scope.menuList = [{
 			total: 1,
 			label: "Painel de Controles",
 			href:"html/index.html",
-			type: "home"//types: home, chart, 
+			type: "home"//types: home, chart
 		},
 		{
 			total: 2,
@@ -203,8 +207,4 @@
   			       {label:"Icones Novos", href:"html/icons.html"}
   			      ]//<span class="label label-danger">NEW</span>"
 	    }];
-		scope.labelInit= "Inicio Des",
-		scope.labelEnd= "Fim Des",
-		scope.porcent= "10",
-		scope.titlePorcent = "% concluído"
 	}

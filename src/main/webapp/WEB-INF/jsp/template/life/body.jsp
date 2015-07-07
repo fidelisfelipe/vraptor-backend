@@ -13,6 +13,7 @@
 		<tiles:insertAttribute name="menuRight"/>
 		<tiles:insertAttribute name="menuLeft"/>
 		<tiles:insertAttribute name="bodyInner"/>
+		<tiles:insertAttribute name="footer"/>
 
 <!-- Body end -->
 
