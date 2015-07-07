@@ -79,7 +79,7 @@
       </ul>
 
       <div class="gn-title">{{titleOffline}} ({{qtdOffline}})</div>
-     <ul class="group">
+      <ul class="group">
       	<li ng-repeat="member in memberOfflineList" class="member"><a href="member.href"><img ng-src="{{member.photo}}" alt="member.name"><b ng-bind="member.name"></b>{{member.city}}</a><span class="status {{member.status}}"></span></li>
       </ul>
 
