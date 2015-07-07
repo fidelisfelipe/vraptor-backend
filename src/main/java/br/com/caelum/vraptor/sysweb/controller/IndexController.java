@@ -26,10 +26,9 @@ public class IndexController {
 	}
 
 	@Path("/")
-	public void indexLife() {
+	public void indexAngular() {
 		result.include("variable", "VRaptor!");
-	} 
-	
+	}
 	@Path("/posts")
 	public void indexPost() {
 		result.include("variable", "VRaptor!");
