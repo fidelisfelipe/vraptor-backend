@@ -24,7 +24,7 @@
 		scope.search = "Pesquisar";
 		scope.username = "Fidelis Guimarães";
 		scope.href = "#";
-		scope.menuSimpleList = [{name:"Mensagens", href:"posts"},{name:"Prescrições", href:"prescriptions"}];
+		scope.menuSimpleList = [{name:"Usuários", href:"usuarios"},{name:"Mensagens", href:"posts"},{name:"Prescrições", href:"prescriptions"}];
 		scope.menuDropDownList = [{name:"Arquivos", href:"#" ,
 			itens:[
 			       {name:"Videos", href:"#"},

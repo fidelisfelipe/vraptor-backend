@@ -2,10 +2,10 @@
 	 * APP
 	 * */
 
-	var app = angular.module('vida', 
-		['controllers-ctrl']);	
+	var app = angular.module('vida', ['controllers-ctrl','services-srv']);	
 
 	var nameVarInject = '$scope';
+	var nameHttpInject = '$http';
 	
 	/**
 	 * Controllers
@@ -13,6 +13,11 @@
 	
 	var controllers = angular.module('controllers-ctrl',[]);
 	
+	/**
+	 * Services
+	 * */
+	
+	var services = angular.module('services-srv',[]);
 	
 
 /** rotas

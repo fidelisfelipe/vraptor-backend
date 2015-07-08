@@ -3,6 +3,7 @@ package br.com.caelum.vraptor.sysweb.business;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.servlet.ServletContext;
 
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.sysweb.business.exception.NegocioException;
@@ -18,7 +19,7 @@ public class UsuariosLogic {
 	protected UsuariosLogic() {
 	}
 	@Inject
-	public UsuariosLogic(Result result, DefaultUsuarioDao usuarios){
+	public UsuariosLogic(DefaultUsuarioDao usuarios){
 		this.usuarios = usuarios;
 	}
 	
