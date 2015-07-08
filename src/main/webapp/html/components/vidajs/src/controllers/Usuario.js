@@ -17,6 +17,9 @@
 		scope.labelBtnSave = "Salvar";
 		scope.labelBtnClose = "Fechar";
 		scope.formData = {};
+		
+		scope.success = false;
+		scope.fail = false;
 		scope.submit = function(){
 			console.log('send form usuario');
 			//delegar para service
@@ -24,10 +27,17 @@
 					method: 'POST',
 				    url: 'usuarios/novo',
 				    data: scope.formData,
-				    headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+				    contentType:'application/json' 
+				    //headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 			}).success(function(data) {
-				console.log('sended form usuario');
+				console.log('send status '+data.success);
+				scope.success = true;
+				swal("Sucesso", "Cadastro realizado com sucesso!", "success");				
+				console.log("success:"+scope.success);
+				console.log("fail:"+scope.fail);
+				//scope.fail = false;
 			});
+			
 		}
 	}
 	

@@ -16,6 +16,10 @@ Bootstrap Core JavaScript File
 Plugin.js - Some Specific JS codes for Plugin Settings
 ================================================ -->
 	<script type="text/javascript" src="html/js/plugins.js"></script>
+<!-- ================================================
+Sweet Alert
+================================================ -->
+<script src="html/js/sweet-alert/sweet-alert.min.js"></script>
     
 	<!-- app -->
 	<script type="text/javascript" src="html/components/vidajs/src/apps/app.js"></script>
@@ -28,5 +32,6 @@ Plugin.js - Some Specific JS codes for Plugin Settings
 	<!-- usuarios -->
 	<script type="text/javascript" src="html/components/vidajs/src/controllers/Usuario.js"></script>
 	<script type="text/javascript" src="html/components/vidajs/src/services/Usuario.js"></script>
+	
 	
 <!--End Javascript -->

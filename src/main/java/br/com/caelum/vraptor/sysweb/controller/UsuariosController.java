@@ -36,9 +36,13 @@ public class UsuariosController {
 		result.include("isList", true);
 		result.include("contexto", ControllerUtil.getContexto(this.getClass()));
 	}
-	@Consumes("application/json") 
 	@Path("/novo")
 	public void index(Usuario usuario){
+		
+		if(usuario.getNome() == null){
+			result.notFound();
+			return;
+		}
 		result.nothing();
 		System.out.println(usuario);
 	}

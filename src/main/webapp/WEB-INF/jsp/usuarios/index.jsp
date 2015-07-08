@@ -49,14 +49,14 @@
 						            <div class="form-group">
 					                  <label class="col-sm-2 control-label form-label" ng-bind="labelName"></label>
 					                  <div class="col-sm-10">
-					                    <input type="text" class="form-control form-control-line" placeholder="{{placeName}}" ng-model="formData.usuario.nome" name="usuario.nome">
+					                    <input type="text" class="form-control form-control-line" placeholder="{{placeName}}" ng-model="formData.usuario.nome" />
 					                  </div>
 					                </div>
 					                
 					                <div class="form-group">
 					                  <label class="col-sm-2 control-label form-label" ng-bind="labelPassword"></label>
 					                  <div class="col-sm-10">
-					                    <input type="password" class="form-control form-control-line" placeholder="{{placePassword}}" ng-model="formData.usuario.senha" name="usuario.senha">
+					                    <input type="password" class="form-control form-control-line" placeholder="{{placePassword}}" ng-model="formData.usuario.senha" />
 					                  </div>
 					                </div>
 					                <div class="modal-footer">
@@ -73,8 +73,6 @@
 					  </div>
 					  <!-- End Row -->
 					
-
-
                   </div>
                   
                 </div>
