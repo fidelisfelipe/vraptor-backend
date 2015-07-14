@@ -20,6 +20,10 @@ Plugin.js - Some Specific JS codes for Plugin Settings
 Sweet Alert
 ================================================ -->
 <script src="html/js/sweet-alert/sweet-alert.min.js"></script>
+<!-- ================================================
+Data Tables
+================================================ -->
+<script src="html/js/datatables/datatables.min.js"></script>
     
 	<!-- app -->
 	<script type="text/javascript" src="html/components/vidajs/src/apps/app.js"></script>

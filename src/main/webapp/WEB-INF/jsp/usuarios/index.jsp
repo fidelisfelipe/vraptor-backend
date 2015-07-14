@@ -7,8 +7,12 @@
 
 <tiles:insertDefinition name="life.layout" >
 	<tiles:putAttribute name="innerMiddle" cascade="true" >
+	
+<!-- Start Row -->
+<div class="row" ng-controller="user-ctrl">	
+	
 <!-- Start Panel -->
-    <div ng-controller="form-usuario-novo-ctr" class="col-md-12 col-lg-4">
+    <div class="col-md-12 col-lg-4">
       <div class="panel panel-transparent">
 
         <div class="panel-title" ng-bind="titleWindow">
@@ -18,12 +22,14 @@
         <div class="panel-body">
           <!-- Start Modal Code -->
 
-            <!-- Link -->
-            <a href="#" data-toggle="modal" data-target="#myModal2" ng-bind="linkNew">
+	      <div class="row">
+          	<!-- Link New-->
+            <a href="#" id="btnNew" data-toggle="modal" data-target="#modalForm" ng-bind="linkNew">
             </a>
+          </div>
 
             <!-- Modal -->
-            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal fade" id="modalForm" modalUsuario tabindex="-1" role="dialog" aria-hidden="true">
               <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -44,6 +50,7 @@
 					        </div>
 					
 					            <div class="panel-body">
+								<!-- Form -->
 					              <form class="form-horizontal" id="form" ng-submit="submit()">
 					
 						            <div class="form-group">
@@ -86,6 +93,42 @@
       </div>
     </div>
     <!-- End Panel -->
+    
+    <!-- Start Panel -->
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-title">
+        </div>
+        <div class="panel-body table-responsive">
+
+            <table id="userList" class="table display">
+                <thead>
+                    <tr>
+                        <th ng-bind="labelName"></th>
+                    </tr>
+                </thead>
+             
+                <tfoot>
+                    <tr>
+                        <th ng-bind="labelName"></th>
+                    </tr>
+                </tfoot>
+             
+                <tbody>
+                    <tr ng-repeat="user in userList">
+                        <td ng-bind="name"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+
+      </div>
+    </div>
+    <!-- End Panel -->
+</div>
+<!-- End Row -->
     
 	</tiles:putAttribute>
 </tiles:insertDefinition>
