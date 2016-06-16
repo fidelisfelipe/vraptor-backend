@@ -3,9 +3,7 @@ package br.com.caelum.vraptor.sysweb.business;
 import java.util.List;
 
 import javax.inject.Inject;
-import javax.servlet.ServletContext;
 
-import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.sysweb.business.exception.NegocioException;
 import br.com.caelum.vraptor.sysweb.dao.impl.DefaultUsuarioDao;
 import br.com.caelum.vraptor.sysweb.model.Usuario;

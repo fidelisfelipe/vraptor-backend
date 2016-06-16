@@ -14,9 +14,6 @@
 			<includes>
 				<include>*</include>
 			</includes>
-			<excludes>
-				<exclude>br.com.caelum:vida</exclude>
-			</excludes>
 		</dependencySet>
 	</dependencySets>
 

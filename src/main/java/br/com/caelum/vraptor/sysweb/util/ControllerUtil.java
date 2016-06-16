@@ -1,5 +1,8 @@
 package br.com.caelum.vraptor.sysweb.util;
 
+import javax.servlet.http.HttpServletRequest;
+
+import br.com.caelum.vraptor.Result;
 
 /**
  * @author Fidelis
@@ -16,6 +19,11 @@ public class ControllerUtil {
 	 */
 	public static String getContexto(Class<? extends Object> classeController) {
 		return classeController.getSimpleName().substring(0,classeController.getSimpleName().length()-10).toLowerCase();
+	}
+
+	public static void addContextAndPath(Result result, Class<? extends Object> class1, HttpServletRequest req) {
+		result.include("path", req.getContextPath());
+		result.include("contexto", getContexto(class1));
 	}
 	
 }

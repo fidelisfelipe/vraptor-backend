@@ -1,11 +1,15 @@
 package br.com.caelum.vraptor.sysweb.controller;
 
+
+import javax.enterprise.inject.Produces;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 
 import br.com.caelum.vraptor.Controller;
+import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Result;
+import br.com.caelum.vraptor.view.Results;
 
 @Controller
 public class IndexController {
@@ -24,18 +28,10 @@ public class IndexController {
 		this.result = result;
 		this.req = req;
 	}
-
+	@Get
 	@Path("/")
-	public void indexLife() {
-		result.include("variable", "VRaptor!");
-	}
-	@Path("/posts")
-	public void indexPost() {
-		result.include("variable", "VRaptor!");
-	}
-	@Path("/prescriptions")
-	public void indexPrescription() {
-		result.include("variable", "VRaptor!");
+	public void index() {
+		result.use(Results.json()).from("VRaptor!", "user").serialize();
 	}
 	
 }

@@ -3,16 +3,16 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>br.com.caelum</groupId>
-	<artifactId>vida</artifactId>
-	<version>4.2.0-RC2-SNAPSHOT</version>
+	<artifactId>vraptor-web</artifactId>
+	<version>4.2.0-RC3-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<description>vida system</description>
+	<description>${basedir}</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<weld.version>2.1.2.Final</weld.version>
-		<vraptor.version>4.2.0-RC2</vraptor.version>
+		<vraptor.version>4.2.0-RC3</vraptor.version>
 	</properties>
 
 	<developers>
@@ -35,9 +35,9 @@
 	</organization>
 
 	<scm>
-		<url>http://github.com/fidelisfelipe/vida</url>
-		<connection>scm:git:git://github.com/fidelisfelipe/vida</connection>
-		<developerConnection>scm:git:git@github.com:fidelisfelipe/vida.git</developerConnection>
+		<url>http://github.com/fidelisfelipe/${basedir}</url>
+		<connection>scm:git:git://github.com/fidelisfelipe/${basedir}</connection>
+		<developerConnection>scm:git:git@github.com:fidelisfelipe/${basedir}.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 
@@ -166,27 +166,16 @@
 			<version>9.1-901.jdbc4</version>
 		</dependency>
 
-		<!-- template -->
+		<!-- WS -->
 		<dependency>
-			<groupId>org.apache.tiles</groupId>
-			<artifactId>tiles-extras</artifactId>
-			<version>3.0.5</version>
+		    <groupId>com.sun.jersey</groupId>
+		    <artifactId>jersey-json</artifactId>
+		    <version>1.19</version>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.tiles</groupId>
-			<artifactId>tiles-servlet</artifactId>
-			<version>3.0.5</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.tiles</groupId>
-			<artifactId>tiles-jsp</artifactId>
-			<version>3.0.5</version>
-		</dependency>
-
 	</dependencies>
 
 	<build>
-		<finalName>vida</finalName>
+		<finalName>${project.artifactId}</finalName>
 		<outputDirectory>${basedir}/src/main/webapp/WEB-INF/classes</outputDirectory>
 		<plugins>
 			<plugin>
