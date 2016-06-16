@@ -1,2 +1,2 @@
-# vida
-projeto VRaptor4 Web Vida
+# vraptor-web
+projeto VRaptor4 Web
