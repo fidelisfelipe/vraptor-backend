@@ -172,15 +172,14 @@
 		    <artifactId>jersey-json</artifactId>
 		    <version>1.19</version>
 		</dependency>
-	</dependencies>
 	
-	<dependency>
-	  <groupId>com.github.jsimone</groupId>
-	  <artifactId>webapp-runner</artifactId>
-	  <version>7.0.57.2</version>
-	  <scope>provided</scope>
-	</dependency>
-
+		<dependency>
+		  <groupId>com.github.jsimone</groupId>
+		  <artifactId>webapp-runner</artifactId>
+		  <version>7.0.57.2</version>
+		  <scope>provided</scope>
+		</dependency>
+</dependencies>
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<outputDirectory>${basedir}/src/main/webapp/WEB-INF/classes</outputDirectory>
