@@ -173,6 +173,13 @@
 		    <version>1.19</version>
 		</dependency>
 	</dependencies>
+	
+	<dependency>
+	  <groupId>com.github.jsimone</groupId>
+	  <artifactId>webapp-runner</artifactId>
+	  <version>8.0.30.1</version>
+	  <scope>provided</scope>
+	</dependency>
 
 	<build>
 		<finalName>${project.artifactId}</finalName>
