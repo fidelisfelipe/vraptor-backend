@@ -29,7 +29,7 @@ public class IndexController {
 		this.result = result;
 		this.req = req;
 	}
-	@Consumes(options = WithoutRoot.class)
+	@Consumes(value = "application/json", options = WithoutRoot.class)
 	@Get
 	@Path("/")
 	public void index() {
